@@ -1,0 +1,29 @@
+import turtle
+
+
+def turtle_image(length):
+    if length > 10:
+
+        turtle.forward(length)
+        turtle.right(30)
+        turtle_image(length - 10)
+        turtle.left(60)
+        turtle_image(length - 10)
+        turtle.right(30)
+        if length - 10 <= 10:
+            turtle.color('red')
+        else:
+            turtle.color('blue')
+        turtle.backward(length)
+
+def main():
+    turtle.penup()
+    turtle.left(90)
+    turtle.backward(100)
+
+    turtle.pendown()
+
+    turtle_image(100)
+
+if __name__ == '__main__':
+    main()
